@@ -2,7 +2,8 @@ class SessionsController < ApplicationController
 
     def new
         user = User.new
-        render :login
+        #change render :login to serializer 
+        #render :login
     end
 
     def create 
@@ -20,5 +21,4 @@ class SessionsController < ApplicationController
         session.delete(:user_id)
         redirect_to '/'
     end 
-    
 end
