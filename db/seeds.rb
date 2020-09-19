@@ -7,4 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 first_category = Category.create(name: "test")
-first_note = Note.create(title: "Test", content: "This is a test to see if my note comes thought.")
+first_note = Note.create(title: "Test", content: "This is a test to see if my note comes thought.", category_id: first_category.id)
