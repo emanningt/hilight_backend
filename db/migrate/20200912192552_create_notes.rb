@@ -3,8 +3,8 @@ class CreateNotes < ActiveRecord::Migration[5.2]
     create_table :notes do |t|
       t.string :title
       t.string :content
-      t.integer :category_id
-      t.integer :user_id
+      t.integer :category_id, null: false
+      
       
       t.timestamps
     end

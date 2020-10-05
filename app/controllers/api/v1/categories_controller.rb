@@ -8,7 +8,7 @@ class Api::V1::CategoriesController < ApplicationController
     def create
         category = Category.new(category_params)
         if category.save
-            render json: category, status:accepted
+            render json: CategorySerializer.new(category), status: :accepted
         else 
             render json: { errors: category.errors.full_messages }, status: :unprocessible_entity
         end 
@@ -18,7 +18,7 @@ class Api::V1::CategoriesController < ApplicationController
     private
 
     def category_params
-        params.require(:category).permit(:name)
+        params.require(:category).permit(:name, :id)
     end 
 
     

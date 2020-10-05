@@ -8,7 +8,7 @@ class Api::V1::NotesController < ApplicationController
     def create
         note = Note.new(note_params)
         if note.save
-            render json: note, status:accepted
+            render json: NoteSerializer.new(note), status: :accepted
         else 
             render json: { errors: note.errors.full_messages }, status: :unprocessible_entity
         end 
@@ -18,7 +18,7 @@ class Api::V1::NotesController < ApplicationController
     private
 
     def note_params
-       params.permit(:note).permit(:title, :content, :category_id)
+        params.require(:note).permit(:title, :content, :category_id)
     end 
 
 end
