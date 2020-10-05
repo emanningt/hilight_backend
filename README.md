@@ -1,24 +1,64 @@
-# README
+# Hilight
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an application for that allows the use to take notes and keep track of whatever they would like. You can create categories and within those categories take your notes to stay organized.  
 
-Things you may want to cover:
+### Getting Started / Installing
 
-* Ruby version
+You can clone this repository to use for yourself. Fallow along if you would like to try it out. 
 
-* System dependencies
+This app is using Postgres. You'll want to do a couple of things right off the bat. You'll want to start out in the console. 
 
-* Configuration
+Step One:
+    First run
 
-* Database creation
+```
+bundle install 
+```
 
-* Database initialization
+Step Two:
+    Because were using Postgres before we migrate our data base we will want to create first. 
 
-* How to run the test suite
+```
+rails db:create
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Step Three:
 
-* Deployment instructions
+```
+rails db:migrate
+```
 
-* ...
+At this point the backend is ready. You'll want make sure you want to also clone the frontend of this application. [Hilight](https://github.com/emanningt/hilight_frontend)
+
+Once the front end is cloned your just about there. 
+
+Step Four:
+    You'll want to make sure your server is running for the backend. 
+
+```
+rails s 
+```
+
+Step Five:
+
+```
+open index.html
+```
+
+This will open the browser with the given route and the application is ready to begain.
+
+You'll create your first category, then you can start taking notes from there.
+
+## Built With
+
+* [Visual Studio Code](https://code.visualstudio.com/Download) 
+
+## Author
+
+* **Eric Manning** - *Initial work for backend* - [Hilight](https://github.com/emanningt/hilight_backend)
+
+You can also see the frontend - *Initial work for frontend* - [Hilight](https://github.com/emanningt/hilight_frontend)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
