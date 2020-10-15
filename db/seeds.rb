@@ -11,4 +11,5 @@
 first_category = Category.create(name: "Other")
 second_category = Category.create(name: "Work")
 
-first_note = Note.create(title: "Test", content: "This is a test to see if my note comes thought.", category_id: first_category.id)
+Note.create(title: "Test 1", content: "This is a test to see if my note comes thought.", category_id: first_category.id)
+Note.create(title: "Test 2", content: "This is a test to see if my note comes thought.", category_id: second_category.id)
