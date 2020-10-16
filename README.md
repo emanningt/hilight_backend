@@ -1,24 +1,39 @@
-# README
+Hilight
+This is an application for that allows the use to take notes and keep track of whatever they would like. You can create categories and within those categories take your notes to stay organized.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Getting Started / Installing
+You can clone this repository to use for yourself. Fallow along if you would like to try it out.
 
-Things you may want to cover:
+This app is using Postgres. You'll want to do a couple of things right off the bat. You'll want to start out in the console.
 
-* Ruby version
+Step One: First run
 
-* System dependencies
+bundle install 
+Step Two: Because were using Postgres before we migrate our data base we will want to create first.
 
-* Configuration
+rails db:create
+Step Three:
 
-* Database creation
+rails db:migrate
+At this point the backend is ready. You'll want make sure you want to also clone the frontend of this application. Hilight
 
-* Database initialization
+Once the front end is cloned your just about there.
 
-* How to run the test suite
+Step Four: You'll want to make sure your server is running for the backend.
 
-* Services (job queues, cache servers, search engines, etc.)
+rails s 
+Step Five:
 
-* Deployment instructions
+open index.html
+This will open the browser with the given route and the application is ready to begain.
 
-* ...
+You'll create your first category, then you can start taking notes from there.
+
+Built With
+Visual Studio Code
+Author
+Eric Manning - Initial work for backend - Hilight
+You can also see the frontend - Initial work for frontend - Hilight
+
+License
+This project is licensed under the MIT License - see the LICENSE.md file for details
